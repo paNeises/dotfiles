@@ -13,4 +13,10 @@ then
   rm -rf ~/.Xresources
   ln -s ~/.paNeises-dotfiles-link/configuration/Xresources ~/.Xresources
 
+  echo "Link bash configuration"
+  rm -rf ~/.bash_profile
+  rm -rf ~/.bashrc
+  ln -s ~/.paNeises-dotfiles-link/configuration/bash_profile ~/.bash_profile
+  ln -s ~/.paNeises-dotfiles-link/configuration/bashrc ~/.bashrc
+
 fi
