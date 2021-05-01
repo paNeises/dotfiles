@@ -1,0 +1,57 @@
+!-----------------------------------------------------------
+! Behavior settings
+!-----------------------------------------------------------
+
+XTerm*metaSendsEscape: true
+XTerm*selectToClipboard: true
+
+!-----------------------------------------------------------
+! Visual settings
+!-----------------------------------------------------------
+
+! Font settings
+XTerm*renderFont: true
+XTerm*faceName: DejaVu Sans Mono
+XTerm*faceSize: 12
+
+! Background color
+XTerm*background: #202020
+XTerm*color0: #202020
+XTerm*color8: #202020
+
+! Red color
+XTerm*color1: #bf8080
+XTerm*color9: #bf8080
+
+! Green color
+XTerm*color2: #80bf80
+XTerm*color10: #80bf80
+
+! Yellow color
+XTerm*color3: #bfbf80
+XTerm*color11: #bfbf80
+
+! Blue color
+XTerm*color4: #8080bf
+XTerm*color12: #8080bf
+
+! Magenta color
+XTerm*color5: #bf80bf
+XTerm*color13: #bf80bf
+
+! Cyan color
+XTerm*color6: #80bfbf
+XTerm*color14: #80bfbf
+
+! Foreground color
+XTerm*foreground: #dfdfdf
+XTerm*cursorColor: #dfdfdf
+XTerm*color7: #dfdfdf
+XTerm*color15: #dfdfdf
+
+!-----------------------------------------------------------
+! Keybindings
+!-----------------------------------------------------------
+
+XTerm*vt100.translations: #override \
+  Shift Ctrl <Key> V: insert-selection(CLIPBOARD)
