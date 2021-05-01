@@ -19,4 +19,8 @@ then
   ln -s ~/.paNeises-dotfiles-link/configuration/bash_profile ~/.bash_profile
   ln -s ~/.paNeises-dotfiles-link/configuration/bashrc ~/.bashrc
 
+  echo "Link tmux configuration"
+  rm -rf ~/.tmux.conf
+  ln -s ~/.paNeises-dotfiles-link/configuration/tmux.conf ~/.tmux.conf
+
 fi
