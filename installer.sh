@@ -23,4 +23,10 @@ then
   rm -rf ~/.tmux.conf
   ln -s ~/.paNeises-dotfiles-link/configuration/tmux.conf ~/.tmux.conf
 
+  echo "Link vim configuration"
+  rm -rf ~/.vim
+  rm -rf ~/.vimrc
+  ln -s ~/.paNeises-dotfiles-link/configuration/vim ~/.vim
+  ln -s ~/.paNeises-dotfiles-link/configuration/vimrc ~/.vimrc
+
 fi
