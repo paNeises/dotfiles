@@ -1,0 +1,83 @@
+"-----------------------------------------------------------
+" Behavior settings
+"-----------------------------------------------------------
+
+" Use vim defaults
+set nocompatible
+
+" Set the number of lines parsed for modeline-commands to 0
+set modelines=0
+
+" Disable modeline-parsing
+set nomodeline
+
+" Following commands need autocmd
+if has("autocmd")
+	" Filetype identification
+	filetype plugin indent on
+endif
+
+" Incremental search
+set incsearch
+
+" Auto indentation
+set autoindent
+
+" Smarttab
+set smarttab
+
+" Wildmenu for command completion
+set wildmenu
+
+"-----------------------------------------------------------
+" Filetype settings
+"-----------------------------------------------------------
+
+" Set latex as default filetype for .tex-files
+let g:tex_flavor="latex"
+
+"-----------------------------------------------------------
+" Visual settings
+"-----------------------------------------------------------
+
+" Colorscheme
+colorscheme paNeises
+
+" Syntax highlighting
+syntax enable
+
+" Set laststatus to use statusline on all windows
+set laststatus=2
+
+" Modify statusline
+" %n: buffernumber
+" %Y: filetype
+" %t: filename
+" %=: switch to right side
+" %l: line number
+" %v: column number
+" %p: percentage of document
+" %%: %-sign
+" %L: lines total
+if &t_Co > 2
+	set statusline=%0*\ %n\ \ \ %Y\ %1*\ %t%=l:%l\ c:%v\ %0*\ %p%%\ \ \ %L\ 
+else
+	set statusline=\ %n\ \ \ %Y\ \ %t%=l:%l\ c:%v\ \ %p%%\ \ \ %L\ 
+endif
+
+" Relative line numbers with global line number in current line
+set relativenumber
+set number
+
+"-----------------------------------------------------------
+" Keybindings
+"-----------------------------------------------------------
+
+" Use Space to list open buffers
+nnoremap <Space> :ls<CR>
+
+" Split movement bindings
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
