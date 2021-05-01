@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# Behavior settings
+#-----------------------------------------------------------
+
+# Set history values
+HISTCONTROL=ignoreboth
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# Append to the history instead of overwriting it
+shopt -s histappend
+
+# Update windowsize after every command
+shopt -s checkwinsize
+
+#-----------------------------------------------------------
+# Visual settings
+#-----------------------------------------------------------
+
+# Manage prompt
+PROMPT_DIRTRIM=3
+PS1="\[\033[1;30;42m\]\u\[\033[1;30;44m\]\h\[\033[1;30;47m\]\w\[\033[0m\] "
+PS2="\[\033[1;30;47m\] \[\033[0m\] "
+
+#-----------------------------------------------------------
+# Path and aliases
+#-----------------------------------------------------------
+
+# Extend path
+PATH=$HOME/.paNeises-dotfiles-link/scripts:$HOME/scripts:$PATH
+
+#-----------------------------------------------------------
+# Additional sources
+#-----------------------------------------------------------
+
+# Source local settings
+if [ -f ~/.bashrc_local ]
+then
+  . ~/.bashrc_local
+fi
