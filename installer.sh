@@ -9,4 +9,8 @@ then
   rm -rf ~/.paNeises-dotfiles-link
   ln -s $installpath ~/.paNeises-dotfiles-link
 
+  echo "Link xterm configuration"
+  rm -rf ~/.Xresources
+  ln -s ~/.paNeises-dotfiles-link/configuration/Xresources ~/.Xresources
+
 fi
