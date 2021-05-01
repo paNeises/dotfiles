@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Additional sources
+#-----------------------------------------------------------
+
+# Source local login shell settings if they exist
+if [ -f ~/.bash_login ]
+then
+  . ~/.bash_login
+fi
+
+# Source bashrc
+if [ -f ~/.bashrc ]
+then
+  . ~/.bashrc
+fi
