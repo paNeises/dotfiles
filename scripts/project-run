@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Exit if the directory is not a project base-directory
+if [ ! -e .paNeises-project-basedir ]
+then
+  echo "The directory is not a project base-directory"
+  exit 1
+fi
+
+# Exit if the project run script does not exist
+if [ ! -e settings/run.sh ]
+then
+  echo "The project run script does not exist"
+  exit 1
+fi
+
+# Run the project run script
+./settings/run.sh
