@@ -81,3 +81,9 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
+
+" Run project binding
+nnoremap <C-W><C-R> <C-c>:!~/.paNeises-dotfiles-link/scripts/project-run<CR>
+
+" Run shell binding
+nnoremap <C-W><C-T> <C-c>:shell<CR>
