@@ -1,0 +1,63 @@
+#!/bin/sh
+
+# Check number of arguments
+if [ $# -ne 1 ]
+then
+  echo "Wrong number of arguments"
+  exit 1
+fi
+
+# Check if path exists
+if [ -e $1 ]
+then
+  echo "Path already exists"
+  exit 1
+fi
+
+echo "Creating project directory"
+
+# Create project directory, exit on error
+mkdir $1
+if [ $? -ne 0 ]
+then
+  echo "Failed while creating project directory"
+  exit 1
+fi
+
+# Change directory into the project directory
+cd $1
+if [ $? -ne 0 ]
+then
+  echo "Failed while changing to project directory"
+  exit 1
+fi
+
+echo "Creation of the project directory finished"
+echo "Creating project structure"
+
+# Create .paNeises-project-basedir file
+touch .paNeises-project-basedir
+
+# Create settings directory
+mkdir settings
+
+# Create organisation directory
+mkdir organisation
+
+# Create run script and add content
+touch settings/run.sh
+chmod 700 settings/run.sh
+echo "#!/bin/sh" > settings/run.sh
+echo "" >> settings/run.sh
+echo "if [ \"\$(pwd)\" != \"$(pwd)\" ]" >> settings/run.sh
+echo "then" >> settings/run.sh
+echo "  echo \"Error: Path mismatch!\"" >> settings/run.sh
+echo "  exit 1" >> settings/run.sh
+echo "fi" >> settings/run.sh
+echo "" >> settings/run.sh
+echo "echo \"Your code goes here\"" >> settings/run.sh
+
+# Create todo file
+touch organisation/todo.txt
+
+echo "Creation of the project structure finished"
