@@ -41,9 +41,6 @@ touch .paNeises-project-basedir
 # Create settings directory
 mkdir settings
 
-# Create organisation directory
-mkdir organisation
-
 # Create run script and add content
 touch settings/run.sh
 chmod 700 settings/run.sh
@@ -57,7 +54,10 @@ echo "fi" >> settings/run.sh
 echo "" >> settings/run.sh
 echo "echo \"Your code goes here\"" >> settings/run.sh
 
-# Create todo file
-touch organisation/todo.txt
+# Create environment directory
+mkdir environment
+
+# Create data directory
+mkdir data
 
 echo "Creation of the project structure finished"
